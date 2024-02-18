@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking System</title>
+</head>
+<body>
+  <h1>Booking System</h1>
+
+  <!-- Booking Form -->
+  <form id="bookingForm">
+    <label for="date">Select a Date:</label>
+    <input type="date" id="date" name="date" required>
+    <br>
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <button type="button" onclick="bookDate()">Book Now</button>
+  </form>
+
+  <!-- Admin Interface -->
+  <div id="adminInterface">
+    <h2>Admin Interface</h2>
+    <button onclick="checkDates()">Check Dates</button>
+  </div>
+
+  <script>
+    // Mock function to simulate booking and checking dates
+    function bookDate() {
+      var date = document.getElementById('date').value;
+      var email = document.getElementById('email').value;
+
+      // Send data to the server for booking logic
+      // You need to implement this on the server side
+
+      alert('Booking Successful!');
+    }
+
+    function checkDates() {
+      // Simulate admin checking dates
+      // You need to fetch and display booked dates from the server
+      var bookedDates = ["2024-02-20", "2024-02-25"];
+
+      alert('Booked Dates:\n' + bookedDates.join('\n'));
+    }
+  </script>
+</body>
+</html>
